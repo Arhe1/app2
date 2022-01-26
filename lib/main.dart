@@ -19,25 +19,24 @@ class MyApp extends StatelessWidget {
         color: Color(0xFF0079D0),
     );
 
-
     return MaterialApp(
       home: Scaffold(
         body:Container(
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/space3.jpeg'),
-              fit: BoxFit.cover,
+              fit: BoxFit.fitHeight,
             )
           ),
           width: double.infinity,
           child: SingleChildScrollView(
             child: Column(children: [
-              SizedBox(height: 150,),
-              const SizedBox(width: 130, height: 94, child: const Image(image: AssetImage('assets/space2.png')),),
+              SizedBox(height: 60,),
+              SizedBox(width: 110, height: 94, child: const Image(image: AssetImage('assets/space2.png')),),
               SizedBox(height: 20,),
               Text('Введите логин в виде 10 цифр номера телефона',
               style: TextStyle(fontSize: 16, color: Color.fromRGBO(0, 0, 0, 0.6)),),
-              SizedBox(height: 20,),
+              SizedBox(height: 70,),
               SizedBox(width: 244,
                 child: TextField(
                   keyboardType: TextInputType.phone,
@@ -50,7 +49,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 30,),
               SizedBox(width: 244,
                 child: TextField(
                   keyboardType: TextInputType.number,
